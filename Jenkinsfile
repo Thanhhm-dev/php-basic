@@ -31,5 +31,11 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy') {
+            steps {
+                sh '/var/jenkins_home/build_remote.sh'
+            }
+        }
     }
 }
